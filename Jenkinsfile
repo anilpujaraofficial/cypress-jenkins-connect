@@ -10,28 +10,37 @@ pipeline {
             }
         }
 
-
-
         stage("Parallel Testing") {
             parallel {
-                stage("Tester 1") {
+                stage("CI Machine #1") {
                     steps {
-                        echo "sa"
+                        // sh 'yarn cypress run --parallel'
+                       sh 'yarn cypress run --record --parallel --ci-build-id $BUILD_TAG'
                     }
                 }
-                stage("Tester 2") {
+                stage("CI Machine #2") {
                     steps {
-                        echo "sa"
+                        // sh 'yarn cypress run --parallel'
+                       sh 'yarn cypress run --record --parallel --ci-build-id $BUILD_TAG'
+                    }
+                }
+
+                stage("CI Machine #3") {
+                    steps {
+                        // sh 'yarn cypress run --parallel'
+                       sh 'yarn cypress run --record --parallel --ci-build-id $BUILD_TAG'
                     }
                 }
 
             }
         }
 
-        stage("end automation") {
-            steps {
-                echo "ea"
+        stage("Report generate"){
+            steps{
+                echo "Report"
             }
         }
+
+
     }
 }
