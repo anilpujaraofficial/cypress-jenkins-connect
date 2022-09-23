@@ -4,11 +4,32 @@ pipeline {
     stages {
         stage("start automation") {
             steps {
-                echo "t1"
+                echo "sa"
             }
         }
 
 
 
+        stage("Parallel Testing") {
+            parallel {
+                stage("Tester 1") {
+                    steps {
+                        echo "sa"
+                    }
+                }
+                stage("Tester 2") {
+                    steps {
+                        echo "sa"
+                    }
+                }
+
+            }
+        }
+
+        stage("end automation") {
+            steps {
+                echo "ea"
+            }
+        }
     }
 }
