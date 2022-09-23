@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage("start automation") {
             steps {
-                echo "sa"
+                sh 'node --version'
+                sh 'npm run i'
+                sh 'npm run npx cypress verify'
             }
         }
 
