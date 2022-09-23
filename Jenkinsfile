@@ -5,7 +5,7 @@ pipeline {
         stage("start automation") {
             steps {
                 sh 'node --version'
-                sh 'yarn i'
+                sh 'npm i'
                 sh 'npx cypress verify'
             }
         }
