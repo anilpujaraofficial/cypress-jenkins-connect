@@ -1,17 +1,22 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage("start automation"){
-            steps{
+    stages {
+        stage("start automation") {
+            steps {
                 echo "t1"
             }
 
         }
 
-        stage("Paralle Testing"){
+        stage("Paralle Testing") {
 
-            stage("Tester 1"){
-                steps{
+            stage("Tester 1") {
+                steps {
+                    echo "p1"
+                }
+            }
+            stage("Tester 2") {
+                steps {
                     echo "p1"
                 }
             }
