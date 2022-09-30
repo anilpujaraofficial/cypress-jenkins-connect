@@ -1,11 +1,12 @@
 pipeline {
     agent any
     stages {
-        stage("Basic Setup") {
+        stage("start automation") {
             steps {
-                echo "Basic setup Start"
-                sh "yarn install"
-                echo "Basic setup completed"
+
+                sh "node --version"
+                sh 'npm i'
+                sh 'npx cypress verify'
             }
         }
         // here the actual automation is ran.
@@ -35,23 +36,13 @@ pipeline {
 
             }
         }
-        // stage("Report Generation") {
-        //     steps {
-                
-        //     }
-        // }
-        // // Remove unnecessary files
-        // stage("Remove unnecessary files") {
-        //     steps {
-                
-        //     }
-        // }
+
     }
 
-    post{
-        always{
-             echo "Report generation Process Running",
-             echo "Remove unnecessary files"
+    post {
+        always {
+            echo "Report generation Process Running",
+                echo "Remove unnecessary files"
         }
     }
 }
