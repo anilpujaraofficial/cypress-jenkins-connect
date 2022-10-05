@@ -1,0 +1,203 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-09-16T14:13:53.476Z",
+    "end": "2022-09-16T14:15:08.055Z",
+    "duration": 74579,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1710199a-f4a9-45a6-9807-9812247040d3",
+      "title": "",
+      "fullFile": "cypress/e2e/main/backend/topicManagement/QNA.cy.js",
+      "file": "cypress/e2e/main/backend/topicManagement/QNA.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "506af37a-54fd-4927-8254-cb88dc467f67",
+          "title": "QNA",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "To verify that the QNA display order sequence as latest QNA in top order",
+              "fullTitle": "QNA To verify that the QNA display order sequence as latest QNA in top order",
+              "timedOut": null,
+              "duration": 32877,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "qnaPageObj.goToArticleSurvey();\nqnaPageObj.getSerialNo();\nqnaPageObj.verifyOrderSequence();",
+              "err": {},
+              "uuid": "f899d7ef-488d-4e61-a7aa-1e6e91305145",
+              "parentUUID": "506af37a-54fd-4927-8254-cb88dc467f67",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify that the user can search the QNA by respondent and article title",
+              "fullTitle": "QNA To verify that the user can search the QNA by respondent and article title",
+              "timedOut": null,
+              "duration": 5529,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "qnaPageObj.goToArticleSurvey();\nqnaPageObj.searchByUser();",
+              "err": {},
+              "uuid": "b63a7d5a-2ec7-4127-9a6e-d2542cc35113",
+              "parentUUID": "506af37a-54fd-4927-8254-cb88dc467f67",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify the QNA basic details in QNA Table",
+              "fullTitle": "QNA To verify the QNA basic details in QNA Table",
+              "timedOut": null,
+              "duration": 6270,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "qnaPageObj.goToArticleSurvey();\nqnaPageObj.searchByUser();\nqnaPageObj.verifyByTitleAndDate();",
+              "err": {},
+              "uuid": "205c8df2-acd9-4367-90ab-0d6ef97edafc",
+              "parentUUID": "506af37a-54fd-4927-8254-cb88dc467f67",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify the basic details of QNA respondent and answer of the Questions along with the questions",
+              "fullTitle": "QNA To verify the basic details of QNA respondent and answer of the Questions along with the questions",
+              "timedOut": null,
+              "duration": 10333,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "qnaPageObj.goToArticleSurvey();\nqnaPageObj.searchByUser();\nqnaPageObj.verifyQuestion();",
+              "err": {},
+              "uuid": "ce6678e6-99a6-431c-a3dc-072a47d9c3aa",
+              "parentUUID": "506af37a-54fd-4927-8254-cb88dc467f67",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify that the admin can cancel the deletion of QNA response",
+              "fullTitle": "QNA To verify that the admin can cancel the deletion of QNA response",
+              "timedOut": null,
+              "duration": 7168,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "qnaPageObj.goToArticleSurvey();\nqnaPageObj.searchByUser();\nqnaPageObj.clickCancelButton();",
+              "err": {},
+              "uuid": "93f3d7c7-4551-403d-9618-dd4561ce99cc",
+              "parentUUID": "506af37a-54fd-4927-8254-cb88dc467f67",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify that the admin can delete the QNA response",
+              "fullTitle": "QNA To verify that the admin can delete the QNA response",
+              "timedOut": null,
+              "duration": 8132,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "qnaPageObj.goToArticleSurvey();\nqnaPageObj.searchByUser();\nqnaPageObj.deleteQNA();",
+              "err": {},
+              "uuid": "dd842fc9-517c-4bea-847b-0910a2f575c1",
+              "parentUUID": "506af37a-54fd-4927-8254-cb88dc467f67",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f899d7ef-488d-4e61-a7aa-1e6e91305145",
+            "b63a7d5a-2ec7-4127-9a6e-d2542cc35113",
+            "205c8df2-acd9-4367-90ab-0d6ef97edafc",
+            "ce6678e6-99a6-431c-a3dc-072a47d9c3aa",
+            "93f3d7c7-4551-403d-9618-dd4561ce99cc",
+            "dd842fc9-517c-4bea-847b-0910a2f575c1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 70309,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]-[datetime]-[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "reportFilename": "[status]-[datetime]-[name]-report",
+        "quite": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

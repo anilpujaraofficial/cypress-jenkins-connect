@@ -1,0 +1,165 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-09-16T14:24:12.143Z",
+    "end": "2022-09-16T14:25:35.856Z",
+    "duration": 83713,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f0ef9afd-f7b6-4b20-9449-2f9c0de33d92",
+      "title": "",
+      "fullFile": "cypress/e2e/main/backend/topicManagement/topicCategory.cy.js",
+      "file": "cypress/e2e/main/backend/topicManagement/topicCategory.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f172bc85-32df-43ec-a912-b080d103dcb5",
+          "title": "Backend Topic Category Module",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "To verify that the user can add the topic category",
+              "fullTitle": "Backend Topic Category Module To verify that the user can add the topic category",
+              "timedOut": null,
+              "duration": 21247,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "topicCategoryPageObj.clickAddNewButton();\ncy.verifyUrl(\"/system/topic-categories/create\");\ntopicCategoryPageObj.addTopicCategory((0, _backendFilePath.backendFilePath)().topic_category_details);\ntopicCategoryPageObj.validateSuccessfulAddedMessage();\ncy.verifyUrl(\"/system/topic-categories\");\ntopicCategoryPageObj.validSearch((0, _backendFilePath.backendFilePath)().topic_category_details);\ntopicCategoryPageObj.validateTitleInTable((0, _backendFilePath.backendFilePath)().topic_category_details);\ntopicCategoryPageObj.validateStatusInTable((0, _backendFilePath.backendFilePath)().topic_category_details);",
+              "err": {},
+              "uuid": "220b5244-f6ea-41cc-83c8-fd12ead5f967",
+              "parentUUID": "f172bc85-32df-43ec-a912-b080d103dcb5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify the types of validations on the title field in add category page",
+              "fullTitle": "Backend Topic Category Module To verify the types of validations on the title field in add category page",
+              "timedOut": null,
+              "duration": 15038,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "topicCategoryPageObj.clickAddNewButton();\ntopicCategoryPageObj.leaveTitleFieldEmpty();\ntopicCategoryPageObj.clickSubmitButton();\ntopicCategoryPageObj.verifyEmptyValidationMessage();\ntopicCategoryPageObj.enterMoreThan50Char();\ntopicCategoryPageObj.clickSubmitButton();\ntopicCategoryPageObj.verifyMaxCharsValidationMessage();\ntopicCategoryPageObj.enterExistingTitle((0, _backendFilePath.backendFilePath)().topic_category_details);\ntopicCategoryPageObj.clickSubmitButton();\ntopicCategoryPageObj.verifyDuplicateValidationMessage(); // topicCategoryPageObj.enterSingleCharacter();\n// topicCategoryPageObj.clickSubmitButton();\n// topicCategoryPageObj.validateSuccessfulAddedMessage();",
+              "err": {},
+              "uuid": "fd03aba4-a96c-4a5e-831b-9b637d3910b6",
+              "parentUUID": "f172bc85-32df-43ec-a912-b080d103dcb5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify the cancellation of the edit category process | To verify that the user can edit the topic category",
+              "fullTitle": "Backend Topic Category Module To verify the cancellation of the edit category process | To verify that the user can edit the topic category",
+              "timedOut": null,
+              "duration": 26607,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "topicCategoryPageObj.validSearch((0, _backendFilePath.backendFilePath)().topic_category_details);\ntopicCategoryPageObj.clickEditButton();\ncy.verifyUrl(\"/edit\");\ntopicCategoryPageObj.enterTitle();\ntopicCategoryPageObj.clickCancelButton();\ncy.verifyUrl(\"/system/topic-categories\");\ntopicCategoryPageObj.validSearch((0, _backendFilePath.backendFilePath)().topic_category_details);\ntopicCategoryPageObj.validateTitleInTable((0, _backendFilePath.backendFilePath)().topic_category_details);\ntopicCategoryPageObj.clickEditButton();\ncy.verifyUrl(\"/edit\");\ntopicCategoryPageObj.editTopicCategoryDetails((0, _backendFilePath.backendFilePath)().topic_category_details);\ntopicCategoryPageObj.validateSuccessfulUpdatedMessage();\ncy.verifyUrl(\"/system/topic-categories\");\ntopicCategoryPageObj.validSearch((0, _backendFilePath.backendFilePath)().topic_category_details);\ntopicCategoryPageObj.validateTitleInTable((0, _backendFilePath.backendFilePath)().topic_category_details);\ntopicCategoryPageObj.validateStatusInTable((0, _backendFilePath.backendFilePath)().topic_category_details);",
+              "err": {},
+              "uuid": "fb6d27dc-d3d3-4580-b6b9-5fc567355599",
+              "parentUUID": "f172bc85-32df-43ec-a912-b080d103dcb5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To verify the cancellation of the category deletion process | To verify that the user can delete the topic category if the category is not assigned to any topic",
+              "fullTitle": "Backend Topic Category Module To verify the cancellation of the category deletion process | To verify that the user can delete the topic category if the category is not assigned to any topic",
+              "timedOut": null,
+              "duration": 16722,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "topicCategoryPageObj.validSearch((0, _backendFilePath.backendFilePath)().topic_category_details);\ntopicCategoryPageObj.clickDeleteButton();\ncommonPageObj.validateDialogBoxVisible();\ncommonPageObj.clickCancelDeleteButton();\ncommonPageObj.validateDialogBoxInvisible();\ntopicCategoryPageObj.validSearch((0, _backendFilePath.backendFilePath)().topic_category_details);\ntopicCategoryPageObj.validateTitleInTable((0, _backendFilePath.backendFilePath)().topic_category_details);\ntopicCategoryPageObj.clickDeleteButton();\ncommonPageObj.validateDialogBoxVisible();\ncommonPageObj.clickConfirmDeleteButton();\ntopicCategoryPageObj.validateSuccessfulDeletedMessage();\ntopicCategoryPageObj.validSearch((0, _backendFilePath.backendFilePath)().topic_category_details);\ncommonPageObj.validateEmptyTableMessage();",
+              "err": {},
+              "uuid": "5239bafb-9c4e-4edf-968c-d8f3c3a31194",
+              "parentUUID": "f172bc85-32df-43ec-a912-b080d103dcb5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "220b5244-f6ea-41cc-83c8-fd12ead5f967",
+            "fd03aba4-a96c-4a5e-831b-9b637d3910b6",
+            "fb6d27dc-d3d3-4580-b6b9-5fc567355599",
+            "5239bafb-9c4e-4edf-968c-d8f3c3a31194"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 79614,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]-[datetime]-[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "reportFilename": "[status]-[datetime]-[name]-report",
+        "quite": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
