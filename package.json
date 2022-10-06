@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "cy:sorry:cypress": "CYPRESS_API_URL='http://localhost:1234/' npx cy2 run --parallel --record --key somekey"
+  },
   "dependencies": {
     "cypress": "^10.8.0"
   },
