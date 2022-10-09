@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage("start automation") {
             steps {
-
                 sh "node --version"
                 sh 'npm i'
                 sh 'npx cypress verify'
