@@ -4,10 +4,21 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "cy:verify": "npx cypress verify",
+    "cy:run": "npx cypress run",
+    "cy:open": "npx cypress open",
+    "cy:clean:report": "rm -rf cypress/reports && mkdir cypress/reports && mkdir cypress/reports/mochareports",
+    "pretest": "npm run cy:clean:report",
+    "cy:combine:reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
+    "cy:generate:report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
+    "posttest": "npm run cy:combine:reports && npm run cy:generate:report",
     "cy:sorry:cypress": "CYPRESS_API_URL='http://localhost:1234/' npx cy2 run --parallel --record --key somekey"
   },
   "dependencies": {
-    "cypress": "^10.9.0"
+    "cypress": "^10.9.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.2.0"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.5.0",
