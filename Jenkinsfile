@@ -6,6 +6,7 @@ pipeline {
                 sh "node --version"
                 sh 'npm i'
                 sh 'npx cypress verify'
+                sh 'npm run pretest'
             }
         }
         // here the actual automation is ran.
@@ -46,7 +47,16 @@ pipeline {
             }
         }
 
+
+
     }
 
-
+    post {
+        always {
+            echo 'npm run posttest'
+        }
+    }
 }
+
+
+
