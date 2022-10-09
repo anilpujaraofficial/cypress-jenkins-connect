@@ -53,10 +53,7 @@ pipeline {
 
     post {
         always {
-            echo 'npm run posttest'
+            sh 'npm run posttest'
         }
     }
 }
-
-
-
