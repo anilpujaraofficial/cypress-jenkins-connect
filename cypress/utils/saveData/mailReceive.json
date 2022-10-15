@@ -1,0 +1,70 @@
+{
+  "id": "c28e1724-061e-4e35-8c86-5333d3295b32",
+  "userId": "b5ed1388-3da6-4775-9ec3-989f5045a108",
+  "inboxId": "c423ff4e-7b84-49c7-adcf-74398960794f",
+  "to": [
+    "c423ff4e-7b84-49c7-adcf-74398960794f@mailslurp.com"
+  ],
+  "from": "c423ff4e-7b84-49c7-adcf-74398960794f@mailslurp.com",
+  "sender": {
+    "rawValue": "c423ff4e-7b84-49c7-adcf-74398960794f@mailslurp.com",
+    "emailAddress": "c423ff4e-7b84-49c7-adcf-74398960794f@mailslurp.com"
+  },
+  "recipients": {
+    "to": [
+      {
+        "rawValue": "c423ff4e-7b84-49c7-adcf-74398960794f@mailslurp.com",
+        "emailAddress": "c423ff4e-7b84-49c7-adcf-74398960794f@mailslurp.com"
+      }
+    ],
+    "cc": [],
+    "bcc": []
+  },
+  "replyTo": "c423ff4e-7b84-49c7-adcf-74398960794f@mailslurp.com",
+  "cc": [],
+  "bcc": [],
+  "headers": {
+    "Return-Path": "<01010183db79219a-72f1d8d8-1e75-4c9d-ae86-2f60d89c282c-000000@us-west-2.amazonses.com>",
+    "Received": "from a27-41.smtp-out.us-west-2.amazonses.com (a27-41.smtp-out.us-west-2.amazonses.com [54.240.27.41])\r\n by inbound-smtp.us-west-2.amazonaws.com with SMTP id 85p6eolj9i1rosbkac4od1ih6786ues9nbfkosg1\r\n for c423ff4e-7b84-49c7-adcf-74398960794f@mailslurp.com;\r\n Sat, 15 Oct 2022 11:48:12 +0000 (UTC)",
+    "X-SES-Spam-Verdict": "PASS",
+    "X-SES-Virus-Verdict": "PASS",
+    "Received-SPF": "pass (spfCheck: domain of us-west-2.amazonses.com designates 54.240.27.41 as permitted sender) client-ip=54.240.27.41; envelope-from=01010183db79219a-72f1d8d8-1e75-4c9d-ae86-2f60d89c282c-000000@us-west-2.amazonses.com; helo=a27-41.smtp-out.us-west-2.amazonses.com;",
+    "Authentication-Results": "amazonses.com;\r\n spf=pass (spfCheck: domain of us-west-2.amazonses.com designates 54.240.27.41 as permitted sender) client-ip=54.240.27.41; envelope-from=01010183db79219a-72f1d8d8-1e75-4c9d-ae86-2f60d89c282c-000000@us-west-2.amazonses.com; helo=a27-41.smtp-out.us-west-2.amazonses.com;\r\n dkim=pass header.i=@amazonses.com;\r\n dkim=pass header.i=@mailslurp.com;\r\n dmarc=none header.from=mailslurp.com;",
+    "X-SES-RECEIPT": "AEFBQUFBQUFBQUFHWStSYzJhcUdpNjFGclMvdmRhYlBxTGFtbW5CVkpHRTJoUXRrL0dkU29RNWVUYnJtU0s0RmU4bHlBdGhYVVNzcDZJbmI5MHlWU0JaSVhsbE9GdXFDZFRZRkk5ck90ZnlPYVdlNzZoWEFGVjEvVkJGOFJXbmdJbkhpRGNsaXNyVVN6Q2ZKays2MXpMbFJmYjZmR0pjTTZOejVMUTdqNXZnZ0VZMXg1SCt0Wjd1SmZkWDlLMjZRTVNZNWQxYk41T1llY2x2SjBTbmFoMTRzS0VtYlBrSjRCTkI5ZFFnZGxIZ0dBTWFsS2E1SVdEZThCU1RNV1hhMmhLWjBZcEQrY3RTRjdTWWFqMEN3S2x4dUJmSHIzMnZhc0RCTjUrMGFPNndRKzM1Zy81TzJza2NjdXlQT2duZjBCeHBYaHNxOU9MREVxUUlzSXlmS2dmMFpnM0tyc1FGamhEWERab1B6MkFmMDlQQ3c4N0MxQU5TK1MxU0dFb1N3SGI2bXpWa1VBakE0PQ==",
+    "X-SES-DKIM-SIGNATURE": "a=rsa-sha256; q=dns/txt; b=K+nsJCcxDJKSNVXGdP3/IaFurglS67PBAzTAlMql91u3sNsBSeGft/bpVZ+kt94yPezmJV0JPcHW+dGDGQqdYBTmShFaEd7YFtLWK/x0Yu/+qUw/LX0yHL53IWEjZIuKPIKc7T6E8bVxovH+3jKgmx+aEcQNpvnPIrawW09JpPo=; c=relaxed/simple; s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1665834493; v=1; bh=t+a3jHQXwX+jkRT5TUTBR49pYxgON7YASB00UjfDYNE=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;",
+    "DKIM-Signature": "v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;\r\n\ts=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1665834492;\r\n\th=From:Sender:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:List-Unsubscribe:Date:Feedback-ID;\r\n\tbh=t+a3jHQXwX+jkRT5TUTBR49pYxgON7YASB00UjfDYNE=;\r\n\tb=GG4tuipmmagJhRbC1FBkODiTtc7mqxswhUchzJzipiO4DyKTsnZHwvtxi55I4UlB\r\n\tJRgud7OmGeuDbG0OrLNiZsJ4l7eVNm6oBLzibqsxAyoqn0wp74YI7eF51c5UzzGZFlW\r\n\tlHiwmFuwjgKi6UV2BO8W1P0xgR21RvlUEm5sP4qg=",
+    "From": "c423ff4e-7b84-49c7-adcf-74398960794f@mailslurp.com",
+    "Sender": "c423ff4e-7b84-49c7-adcf-74398960794f@mailslurp.com",
+    "Reply-To": "c423ff4e-7b84-49c7-adcf-74398960794f@mailslurp.com",
+    "To": "c423ff4e-7b84-49c7-adcf-74398960794f@mailslurp.com",
+    "Message-ID": "<01010183db79219a-72f1d8d8-1e75-4c9d-ae86-2f60d89c282c-000000@us-west-2.amazonses.com>",
+    "Subject": "Qui expedita eaque eligendi corrupti veritatis. Nesciunt impedit ut\r\n nobis porro sit autem. Alias ipsa assumenda quasi et blanditiis et.",
+    "MIME-Version": "1.0",
+    "Content-Type": "multipart/mixed; \r\n\tboundary=\"----=_Part_6268_1371878553.1665834492287\"",
+    "X-MAILSLURP-USER-ID": "b5ed1388-3da6-4775-9ec3-989f5045a108",
+    "X-MAILSLURP-INBOX-ID": "c423ff4e-7b84-49c7-adcf-74398960794f",
+    "X-MAILSLURP-SENT-ID": "7d8ff6e8-6ed1-40ee-8259-03ca1b7f2634",
+    "List-Unsubscribe": "<mailto:unsubscribe@mailslurplist.link?subject=eyJ1c2VySWQiOiJiNWVkMTM4OC0zZGE2LTQ3NzUtOWVjMy05ODlmNTA0NWExMDgiLCJpbmJveElkIjoiYzQyM2ZmNGUtN2I4NC00OWM3LWFkY2YtNzQzOTg5NjA3OTRmIiwic2VudEVtYWlsSWQiOiI3ZDhmZjZlOC02ZWQxLTQwZWUtODI1OS0wM2NhMWI3ZjI2MzQifQ>",
+    "Date": "Sat, 15 Oct 2022 11:48:12 +0000",
+    "Feedback-ID": "1.us-west-2.xVmM3nkKyQQByFtLf8LXG4qOZ1svlccOUe4mIXMga4I=:AmazonSES",
+    "X-SES-Outgoing": "2022.10.15-54.240.27.41"
+  },
+  "attachments": [],
+  "subject": "Qui expedita eaque eligendi corrupti veritatis. Nesciunt impedit ut nobis porro sit autem. Alias ipsa assumenda quasi et blanditiis et.",
+  "body": "<html></html>",
+  "bodyExcerpt": "<html></html>",
+  "bodyMD5Hash": "C83301425B2AD1D496473A5FF3D9ECCA",
+  "isHTML": true,
+  "charset": "UTF-8",
+  "analysis": {
+    "spamVerdict": "PASS",
+    "virusVerdict": "PASS",
+    "spfVerdict": "PASS",
+    "dkimVerdict": "PASS",
+    "dmarcVerdict": "GRAY"
+  },
+  "createdAt": "2022-10-15T11:48:13.499Z",
+  "updatedAt": "2022-10-15T11:48:13.499Z",
+  "read": false,
+  "teamAccess": true
+}
