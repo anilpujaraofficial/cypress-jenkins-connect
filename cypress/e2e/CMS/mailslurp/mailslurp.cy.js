@@ -9,6 +9,7 @@ describe("Email", () => {
   it("create email", () => {
     createEmail(file_path().mailCreate);
   });
+
   it("send email", () => {
     sendEmail();
   });

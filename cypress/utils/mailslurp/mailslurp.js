@@ -21,7 +21,7 @@ export function sendEmail() {
       mailslurp.sendEmail(res.id, {
         to: [res.emailAddress],
         subject: sub,
-        body: "<html></html>",
+        body: `<html>validate ${new Date()}</html>`,
         isHTML: true,
       })
     );
@@ -31,7 +31,7 @@ export function sendEmail() {
 
 export function receiveEmails() {
   cy.readFile(file_path().mailCreate).then((res) => {
-    cy.wait(1000);
+    cy.wait(1500);
     cy.mailslurp()
       .then((mailslurp) => mailslurp.waitForLatestEmail(res.id, 30000, true))
       .then((res) => {

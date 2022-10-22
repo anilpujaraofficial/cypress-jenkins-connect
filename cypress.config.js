@@ -13,15 +13,20 @@ module.exports = defineConfig({
           return false;
         },
       });
+
+      return require("cypress-grep/src/plugin")(on, config);
     },
-    // excludeSpecPattern: ["cypress/e2e/CMS", "cypress/e2e/1-getting-started"],
+    excludeSpecPattern: ["cypress/e2e/2-advanced-examples"],
     experimentalSessionAndOrigin: true,
     redirectionLimit: 500,
-    numTestsKeptInMemory: 0,
+    // numTestsKeptInMemory: 0,
     projectId: "todo",
     defaultCommandTimeout: 30000,
     responseTimeout: 30000,
     requestTimeout: 30000,
+    viewportHeight: 900,
+    viewportWidth: 1440,
+    specPattern: "cypress/e2e/**/*.spec.js",
     //report
     reporter: "mochawesome",
     reporterOptions: {
@@ -34,9 +39,12 @@ module.exports = defineConfig({
     //env
     env: {
       MAILSLURP_API_KEY:
-        "ff307ad5681c346fac2cba986968b2a575876417c67d034186843d5e79e08f85",
+        "e8897a90e22f400dc20acd65fee004cad35bb43dd673a40b5a24d04f701bbe9d",
+      MAILOSAUR_API_KEY: "QybQ5TaFa5QuqKe2",
       faker: true,
       testingEnv: "QA",
+      // grepFilterSpecs: true,
+      grepOmitFiltered: true,
     },
   },
 });

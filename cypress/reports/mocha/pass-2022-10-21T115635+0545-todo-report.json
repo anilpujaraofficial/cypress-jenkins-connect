@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-10-21T06:11:31.327Z",
+    "end": "2022-10-21T06:11:35.541Z",
+    "duration": 4214,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fa2cc003-632e-4abb-b6d6-15d99148e28b",
+      "title": "",
+      "fullFile": "cypress/e2e/1-getting-started/todo.cy.js",
+      "file": "cypress/e2e/1-getting-started/todo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "66b4ec01-bf0e-4fc7-9331-0d8fb99a9bcb",
+          "title": "example to-do app",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "displays two todo items by default",
+              "fullTitle": "example to-do app displays two todo items by default",
+              "timedOut": null,
+              "duration": 1068,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// We use the `cy.get()` command to get all elements that match the selector.\n// Then, we use `should` to assert that there are two matched items,\n// which are the two default items.\ncy.get(\".todo-list li\").should(\"have.length\", 2); // We can go even further and check that the default todos each contain\n// the correct text. We use the `first` and `last` functions\n// to get just the first and last matched elements individually,\n// and then perform an assertion with `should`.\ncy.get(\".todo-list li\").first().should(\"have.text\", \"Pay electric bill\");\ncy.get(\".todo-list li\").last().should(\"have.text\", \"Walk the dog\");",
+              "err": {},
+              "uuid": "068f80be-28f3-4e4e-b03d-e17e1dfa9dfd",
+              "parentUUID": "66b4ec01-bf0e-4fc7-9331-0d8fb99a9bcb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "068f80be-28f3-4e4e-b03d-e17e1dfa9dfd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1068,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]-[datetime]-[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "reportFilename": "[status]-[datetime]-[name]-report",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -21,3 +21,9 @@ import "./commands";
 
 require("cypress-xpath");
 import "cypress-mailslurp";
+require("cypress-grep")();
+// require("cypress-dark/src/halloween");
+// require("cypress-dark");
+// import "cypress-forced-colors";
+import "cypress-if";
+require("cypress-mailosaur");
