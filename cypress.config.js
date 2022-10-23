@@ -24,8 +24,8 @@ module.exports = defineConfig({
     defaultCommandTimeout: 30000,
     responseTimeout: 30000,
     requestTimeout: 30000,
-    viewportHeight: 900,
-    viewportWidth: 1440,
+    // viewportHeight: 900,
+    // viewportWidth: 1440,
 
     //report
     reporter: "mochawesome",
