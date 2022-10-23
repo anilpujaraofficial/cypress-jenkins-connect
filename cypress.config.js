@@ -14,16 +14,16 @@ module.exports = defineConfig({
         },
       });
     },
-    excludeSpecPattern: ["cypress/e2e/CMS", "cypress/e2e/1-getting-started"],
+    excludeSpecPattern: ["cypress/e2e/CMS", "cypress/e2e/2-advanced-examples"],
     experimentalSessionAndOrigin: true,
     redirectionLimit: 500,
-    // numTestsKeptInMemory: 0,
+    numTestsKeptInMemory: 0,
     projectId: "hwbhq7",
-    // defaultCommandTimeout: 30000,
-    // responseTimeout: 30000,
-    // requestTimeout: 30000,
-    // viewportHeight: 900,
-    // viewportWidth: 1440,
+    defaultCommandTimeout: 30000,
+    responseTimeout: 30000,
+    requestTimeout: 30000,
+    viewportHeight: 900,
+    viewportWidth: 1440,
 
     //report
     reporter: "mochawesome",
