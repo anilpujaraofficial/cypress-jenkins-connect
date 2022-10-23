@@ -26,7 +26,7 @@ module.exports = defineConfig({
     requestTimeout: 30000,
     viewportHeight: 900,
     viewportWidth: 1440,
-    specPattern: "cypress/e2e/**/*.spec.js",
+
     //report
     reporter: "mochawesome",
     reporterOptions: {

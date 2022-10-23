@@ -1,27 +1,31 @@
 import { faker } from "@faker-js/faker";
 import { file_path } from "../../../utils/filePath/filepath";
+
 describe("Mailosaur", () => {
   const serverId = "jetbgydi";
   const serverDomain = "jetbgydi.mailosaur.net";
   const emailAddress =
     faker.name.firstName().toLowerCase() + "@" + serverDomain;
-
-  //   it("create", () => {
-  //     cy.get('[data-test="sign-in-forgot-password-link"]').click();
-  //     cy.get('[data-test="username-input"]').type(emailAddress);
-  //     cy.get('[data-test="forgot-password-send-code-button"]').click();
-  //   });
+  const password = faker.internet.password();
+  beforeEach(() => {
+    cy.visit("https://playground.mailslurp.com/").should("exist");
+    cy.url().should("include", "https://playground.mailslurp.com/");
+  });
 
   it("send mail", () => {
-    cy.visit("https://playground.mailslurp.com/");
     cy.get('[data-test="sign-in-create-account-link"]').click();
-    cy.get(':nth-child(1) > [data-test="sign-up-non-phone-number-input"]').type(
-      emailAddress
-    );
-    cy.get(':nth-child(2) > [data-test="sign-up-non-phone-number-input"]').type(
-      faker.internet.password()
-    );
-    cy.get('[data-test="sign-up-create-account-button"]').click();
+    cy.get(':nth-child(1) > [data-test="sign-up-non-phone-number-input"]')
+      .should("exist")
+      .type(emailAddress)
+      .should("have.value", emailAddress);
+    cy.get(':nth-child(2) > [data-test="sign-up-non-phone-number-input"]')
+      .should("exist")
+      .type(password)
+      .should("have.value", password);
+    cy.get('[data-test="sign-up-create-account-button"]')
+      .should("exist")
+      .and("be.visible")
+      .click();
 
     cy.writeFile(file_path().mailCreate1, { email: emailAddress });
   });
