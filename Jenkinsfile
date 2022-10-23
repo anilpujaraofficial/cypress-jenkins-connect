@@ -14,7 +14,7 @@ pipeline {
             parallel {
                 stage("CI Machine #1") {
                     steps {
-                        sh "yarn cypress run --key=bbd0d231-5efb-4928-9ea0-ac11b0e864f9 --record --parallel  --group parallel_run"
+                        sh "npx cypress run --record --key bbd0d231-5efb-4928-9ea0-ac11b0e864f9 --parallel"
                         // sh "npm run cy:sorry:cypress"
 
                     }
@@ -22,7 +22,7 @@ pipeline {
                 }
                 stage("CI Machine #2") {
                     steps {
-                        sh "yarn cypress run --key=bbd0d231-5efb-4928-9ea0-ac11b0e864f9 --record --parallel  --group parallel_run"
+                        sh "npx cypress run --record --key bbd0d231-5efb-4928-9ea0-ac11b0e864f9 --parallel"
                         // sh "npm run cy:sorry:cypress"
 
                     }
@@ -30,7 +30,7 @@ pipeline {
                 }
                 stage("CI Machine #3") {
                     steps {
-                        sh "yarn cypress run --key=bbd0d231-5efb-4928-9ea0-ac11b0e864f9 --record --parallel  --group parallel_run"
+                        sh "npx cypress run --record --key bbd0d231-5efb-4928-9ea0-ac11b0e864f9 --parallel"
                         // sh "npm run cy:sorry:cypress"
 
                     }
