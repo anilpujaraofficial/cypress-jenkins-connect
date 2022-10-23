@@ -12,7 +12,7 @@
     "cy:combine:reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
     "cy:generate:report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
     "posttest": "npm run cy:combine:reports && npm run cy:generate:report",
-    "cy:parallel:run": "npx cypress run --record --key bbd0d231-5efb-4928-9ea0-ac11b0e864f9 --parallel --group 2x-chrome --browser chrome ",
+    "cy:parallel:run": "npx cypress run --record --key bbd0d231-5efb-4928-9ea0-ac11b0e864f9 --parallel",
     "cy:sorry:cypress": "CYPRESS_API_URL='http://localhost:1234/' npx cy2 run --parallel --record --key somekey"
   },
   "dependencies": {
