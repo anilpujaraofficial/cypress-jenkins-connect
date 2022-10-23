@@ -24,7 +24,6 @@ import "cypress-mailslurp";
 require("cypress-grep")();
 // require("cypress-dark/src/halloween");
 require("cypress-dark");
-// import "cypress-forced-colors";
+
 import "cypress-if";
 require("cypress-mailosaur");
-require("cypress-watch-and-reload/support");

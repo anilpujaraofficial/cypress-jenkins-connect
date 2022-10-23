@@ -13,14 +13,12 @@ module.exports = defineConfig({
           return false;
         },
       });
-
-      return require("cypress-watch-and-reload/plugins")(on, config);
     },
-    excludeSpecPattern: ["cypress/e2e/2-advanced-examples"],
+    excludeSpecPattern: ["cypress/e2e/CMS", "cypress/e2e/1-getting-started"],
     experimentalSessionAndOrigin: true,
     redirectionLimit: 500,
     // numTestsKeptInMemory: 0,
-    projectId: "todo",
+    projectId: "6yynyk",
     defaultCommandTimeout: 30000,
     responseTimeout: 30000,
     requestTimeout: 30000,
@@ -45,10 +43,6 @@ module.exports = defineConfig({
       testingEnv: "QA",
       // grepFilterSpecs: true,
       // grepOmitFiltered: true,
-
-      "cypress-watch-and-reload": {
-        watch: ["page/*", "circle.yml"],
-      },
     },
   },
 });
