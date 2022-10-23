@@ -13,7 +13,7 @@
     "cy:generate:report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
     "posttest": "npm run cy:combine:reports && npm run cy:generate:report",
     "cy:parallel:run": "npx cypress run --record --key bbd0d231-5efb-4928-9ea0-ac11b0e864f9 --parallel",
-    "cy:sorry:cypress": "CYPRESS_API_URL='http://localhost:1234/' npx cy2 run --parallel --record --key somekey --group 2x-chrome --browser chrome"
+    "cy:sorry:cypress": "CYPRESS_API_URL='http://localhost:1234/' npx cy2 run --parallel --record --key somekey --group run_test"
   },
   "dependencies": {
     "cypress": "^10.9.0",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^7.5.0",
+    "concurrently": "^7.5.0",
     "cy-search": "^1.2.0",
     "cypress-dark": "^1.8.3",
     "cypress-file-upload": "^5.0.8",
