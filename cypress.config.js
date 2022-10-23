@@ -14,7 +14,7 @@ module.exports = defineConfig({
         },
       });
 
-      return require("cypress-grep/src/plugin")(on, config);
+      return require("cypress-watch-and-reload/plugins")(on, config);
     },
     excludeSpecPattern: ["cypress/e2e/2-advanced-examples"],
     experimentalSessionAndOrigin: true,
@@ -44,7 +44,11 @@ module.exports = defineConfig({
       faker: true,
       testingEnv: "QA",
       // grepFilterSpecs: true,
-      grepOmitFiltered: true,
+      // grepOmitFiltered: true,
+
+      "cypress-watch-and-reload": {
+        watch: ["page/*", "circle.yml"],
+      },
     },
   },
 });
