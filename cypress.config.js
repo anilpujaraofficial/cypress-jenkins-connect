@@ -19,9 +19,9 @@ module.exports = defineConfig({
     redirectionLimit: 500,
     // numTestsKeptInMemory: 0,
     projectId: "todo",
-    defaultCommandTimeout: 30000,
-    responseTimeout: 30000,
-    requestTimeout: 30000,
+    // defaultCommandTimeout: 30000,
+    // responseTimeout: 30000,
+    // requestTimeout: 30000,
     // viewportHeight: 900,
     // viewportWidth: 1440,
 
