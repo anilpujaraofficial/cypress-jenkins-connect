@@ -18,7 +18,7 @@ module.exports = defineConfig({
     experimentalSessionAndOrigin: true,
     redirectionLimit: 500,
     // numTestsKeptInMemory: 0,
-    projectId: "hwbhq7",
+    projectId: "todo",
     defaultCommandTimeout: 30000,
     responseTimeout: 30000,
     requestTimeout: 30000,
