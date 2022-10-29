@@ -1,3 +1,4 @@
+/// <reference types="cypress-xpath" />
 export class CommonPage {
   textInput(xpath, value) {
     cy.xpath(xpath)
