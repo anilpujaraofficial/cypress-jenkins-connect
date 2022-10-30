@@ -14,32 +14,32 @@ pipeline {
             parallel {
                 stage("CI Machine #1") {
                     steps {
-                        sh "npm run cy:parallel:run"
-                        // sh "npm run cy:sorry:cypress"
+                        // sh "npm run cy:parallel:run"
+                        sh "npm run cy:sorry:cypress"
 
                     }
 
                 }
                 stage("CI Machine #2") {
                     steps {
-                        sh "npm run cy:parallel:run"
-                        // sh "npm run cy:sorry:cypress"
+                        // sh "npm run cy:parallel:run"
+                        sh "npm run cy:sorry:cypress"
 
                     }
 
                 }
                 stage("CI Machine #3") {
                     steps {
-                        sh "npm run cy:parallel:run"
-                        // sh "npm run cy:sorry:cypress"
+                        // sh "npm run cy:parallel:run"
+                        sh "npm run cy:sorry:cypress"
 
                     }
 
                 }
                 stage("CI Machine #4") {
                     steps {
-                        sh "npm run cy:parallel:run"
-                        // sh "npm run cy:sorry:cypress"
+                        // sh "npm run cy:parallel:run"
+                        sh "npm run cy:sorry:cypress"
                     }
                 }
 
@@ -53,7 +53,7 @@ pipeline {
 
     post {
         always {
-            sh 'npm run posttest'
+            echo 'always  post!!!'
         }
     }
 }
