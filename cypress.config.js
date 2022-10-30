@@ -24,6 +24,10 @@ module.exports = defineConfig({
     // requestTimeout: 30000,
     // viewportHeight: 900,
     // viewportWidth: 1440,
+    retries: {
+      runMode: 2,
+      openMode: 0,
+    },
 
     //report
     reporter: "mochawesome",
