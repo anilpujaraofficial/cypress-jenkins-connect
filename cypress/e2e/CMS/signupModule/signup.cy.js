@@ -15,9 +15,15 @@ describe("signup module", () => {
       .should("have.value", "123admin@")
       .and("be.visible");
 
+    cy.xpath("//div[@class='login-wrapper']//div[3]").then((res) => {
+      debugger;
+    });
+
     cy.xpath("//button[contains(text(),'ログイン')]").click();
-    cy.xpath("//span[contains(text(),'イベント管理')]").click();
-    for (let i = 0; i < 50; i++) {
+    cy.get("#sidenav4 > :nth-child(3) > a > .span-link").click({
+      force: true,
+    });
+    for (let i = 0; i < 40; i++) {
       cy.xpath("(//button[@type='button'])[1]").click();
       cy.xpath("//button[@id='confirmDelete']").click();
     }
