@@ -7,13 +7,14 @@
     "cy:verify": "npx cypress verify",
     "cy:run": "npx cypress run",
     "cy:open": "npx cypress open",
+    "cy:clean:data": "rm -rf cypress/utils/saveData/",
     "cy:clean:report": "rm -rf cypress/reports && mkdir cypress/reports && mkdir cypress/reports/mochareports",
-    "pretest": "npm run cy:clean:report",
+    "pretest": "npm run cy:clean:data && npm run cy:clean:report ",
     "cy:combine:reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
     "cy:generate:report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
-    "posttest": "npm run cy:combine:reports && npm run cy:generate:report",
-    "cy:parallel:run": "npx cypress run --record --key bbd0d231-5efb-4928-9ea0-ac11b0e864f9 --parallel --group run_test",
-    "cy:sorry:cypress": "CYPRESS_API_URL='http://localhost:1234/' npx cy2 run --parallel --record --key somekey --group run_test"
+    "cy:parallel:run": "npx cypress run --record --key bbd0d231-5efb-4928-9ea0-ac11b0e864f9 --parallel --group regression",
+    "cy:sorry:cypress": "CYPRESS_API_URL='http://localhost:1234/' npx cy2 run --parallel --record --key somekey --group regression",
+    "posttest": "npm run cy:combine:reports && npm run cy:generate:report"
   },
   "dependencies": {
     "cypress": "^10.9.0",
